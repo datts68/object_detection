@@ -130,7 +130,7 @@ In short, SSDs are fast but may fail to detect smaller objects with decent accur
 
 The TensorFlow Object Detection API has provided us with a bunch of [pre-trained models](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md). It is highly recommended to initialize training using a pre-trained model. It can heavily reduce the training time.
 
-Download one of these models, and extract the contents into your base directory. Since I was more focused on the accuracy, but also wanted a reasonable execution time, I chose the ResNet-50 version of the Faster RCNN model. After extraction, you will receive the model checkpoints, a frozen inference graph, and a pipeline.config file.
+Download one of these models, and extract the contents into your base directory. Since I was more focused on the accuracy, but also wanted a reasonable execution time, I chose the ResNet-50 version of the Faster RCNN model **(faster_rcnn_resnet50_coco)**. After extraction, you will receive the model checkpoints, a frozen inference graph, and a pipeline.config file.
 
 One last thing remains! You have to define the “training job” in the pipeline.config file. Place the file in the base directory. What really matters is the last few lines of the file — you only need to set the highlighted values to your respective file locations.
 ```bash
