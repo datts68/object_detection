@@ -11,7 +11,7 @@ git clone git@github.com:datts68/object_detection.git
 
 Start Tensorflow container:
 ```bash
-docker run --gpus all -it --mount type=bind,source="$(pwd)"/object_detection,target=/app tensorflow/tensorflow:1.15.2-gpu bash
+docker run --gpus all -it --mount type=bind,source="$(pwd)"/object_detection,target=/app tensorflow/tensorflow:1.4.0-gpu bash
 ```
 
 ### Dependencies
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 The API uses Protobufs to configure and train model parameters. We need to compile the Protobuf libraries before using them. First, you have to install the Protobuf Compiler using the below command:
 ```bash
-sudo apt-get install protobuf-compiler
+apt-get install -y protobuf-compiler
 ```
 
 Now, you can compile the Protobuf libraries using the following command:
