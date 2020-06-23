@@ -18,6 +18,7 @@ docker run --gpus all -it --mount type=bind,source="$(pwd)"/object_detection,tar
 Assuming you have TensorFlow installed, you may need to install a few more dependencies, which you can do by executing the following in the base directory:
 ```bash
 pip install -r requirements.txt
+apt-get install -y libsm6 libxext6 libxrender-dev # Only tensorflow:1.4.0-gpu
 ```
 
 The API uses Protobufs to configure and train model parameters. We need to compile the Protobuf libraries before using them. First, you have to install the Protobuf Compiler using the below command:
