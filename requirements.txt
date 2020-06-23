@@ -3,3 +3,4 @@ lxml
 jupyter
 matplotlib
 opencv-python
+numpy
