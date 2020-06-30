@@ -19,7 +19,7 @@ Assuming you have TensorFlow installed, you may need to install a few more depen
 ```bash
 pip install -r requirements.txt
 
-# Only tensorflow:1.4.0-gpu
+# With tensorflow:1.4.0-gpu
 apt update
 apt install -y libsm6 libxext6 libxrender-dev python-tk
 ```
