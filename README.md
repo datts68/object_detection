@@ -20,12 +20,13 @@ Assuming you have TensorFlow installed, you may need to install a few more depen
 pip install -r requirements.txt
 
 # Only tensorflow:1.4.0-gpu
-apt-get install -y libsm6 libxext6 libxrender-dev python-tk
+apt update
+apt install -y libsm6 libxext6 libxrender-dev python-tk
 ```
 
 The API uses Protobufs to configure and train model parameters. We need to compile the Protobuf libraries before using them. First, you have to install the Protobuf Compiler using the below command:
 ```bash
-apt-get install -y protobuf-compiler
+apt install -y protobuf-compiler
 ```
 
 Now, you can compile the Protobuf libraries using the following command:
