@@ -111,12 +111,12 @@ train_config {
   gradient_clipping_by_norm: 10.0
   fine_tune_checkpoint: "model.ckpt"
   from_detection_checkpoint: true
-  num_steps: 200000
+  num_steps: 20000
 }
 train_input_reader {
   label_map_path: "annotations/label_map.pbtxt"
   tf_record_input_reader {
-    input_path: train.record"
+    input_path: "train.record"
   }
 }
 eval_config {
@@ -129,6 +129,6 @@ eval_input_reader {
   shuffle: false
   num_readers: 1
   tf_record_input_reader {
-    input_path: val.record"
+    input_path: "val.record"
   }
 }
