@@ -155,6 +155,20 @@ eval_input_reader {
     input_path: val.record"
   }
 }
+
+# If you use ssd_mobilenet_v1_coco:
+loss {
+  classification_loss {
+    weighted_sigmoid {
+      anchorwise_output: true #add this
+    }
+  }
+  localization_loss {
+    weighted_smooth_l1 {
+      anchorwise_output: true #add this
+    }
+  }
+}
 ```
 
 If you have experience in setting the best hyper parameters for your model, you may do so. The creators have given some rather brief guidelines [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/configuring_jobs.md).
